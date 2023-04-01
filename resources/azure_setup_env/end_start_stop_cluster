@@ -1,0 +1,20 @@
+
+#start-all.sh
+start-yarn.sh
+start-dfs.sh
+docker start postgress_container
+jps
+
+
+
+
+#stop-all.sh
+
+stop-yarn.sh
+stop-dfs.sh
+jps
+
+
+
+
+#postrgress
