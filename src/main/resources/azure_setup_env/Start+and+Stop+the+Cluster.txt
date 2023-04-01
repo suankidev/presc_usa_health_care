@@ -13,3 +13,13 @@ jps
 
 ### If you get the error - Permission denied (publickey).
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+
+
+
+
+
+================>if history server
+
+cd /opt/spar3/sbin
+start-history-server.sh
+jps
