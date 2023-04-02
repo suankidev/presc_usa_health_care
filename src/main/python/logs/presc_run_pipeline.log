@@ -1,8 +1,7 @@
-"01-Apr-23 20:30:44" - root - INFO - run_presc pipline is started
-"01-Apr-23 20:30:44" - root - INFO - main() is started
-"01-Apr-23 20:32:47" - root - INFO - run_presc pipline is started
-"01-Apr-23 20:32:47" - root - INFO - main() is started
-"01-Apr-23 20:33:05" - root - INFO - run_presc_pipline is completed
-"01-Apr-23 20:34:43" - root - INFO - run_presc pipline is started
-"01-Apr-23 20:34:43" - root - INFO - main() is started
-"01-Apr-23 20:35:01" - root - INFO - run_presc_pipline is completed
+"02-Apr-23 11:07:52" - root - INFO - run_presc pipline is started
+"02-Apr-23 11:07:52" - root - INFO - main() is started
+"02-Apr-23 11:07:52" - create_object - INFO - get_spark_object() is started, The 'TEST' envn is used.
+"02-Apr-23 11:08:05" - create_object - INFO - Spark Object is created...
+"02-Apr-23 11:08:11" - validation - INFO - Validate the spark session by printing[Row(current_date()=datetime.date(2023, 4, 2))]
+"02-Apr-23 11:08:11" - validation - INFO - Spark Object is Validated
+"02-Apr-23 11:08:11" - root - INFO - run_presc_pipline is completed

@@ -27,7 +27,6 @@ def main():
   try:
       logging.info("main() is started")
       spark = get_spark_object(gav.envn, gav.appName)
-      print("Spark Object created!")
       get_curr_date(spark)
 
       logging.info("run_presc_pipline is completed")
