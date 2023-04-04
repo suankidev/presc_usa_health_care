@@ -1,0 +1,36 @@
+### Download PostSQL jdbc driver. 
+cd /home/${USER}/projects/PrescPipeline/src/main/python/lib
+wget https://jdbc.postgresql.org/download/postgresql-42.3.5.jar
+
+### Open a pyspark shell and import the jar file.
+pyspark3 --jars /home/${USER}/projects/PrescPipeline/src/main/python/lib/postgresql-42.3.5.jar
+
+### Crete a Sample dataframe.
+sampleDF = spark.createDataFrame([('Robert',25),
+                                  ('Reid',35),
+                                  ('Ram',21)], 
+                                 ["EmpName", "EmpAge"])
+
+### Check documentation of JDBS API.
+help(sampleDF.writer.jdbc)
+
+### Save the Spark Dataframe into a Postgre Table
+sampleDF.write.format("jdbc")\
+    .option("url", "jdbc:postgresql://localhost:6432/prespipeline") \
+    .option("driver", "org.postgresql.Driver") \
+    .option("dbtable", "sample5") \
+    .mode("append") \
+    .option("user", "sparkuser1") \
+    .option("password", "user123") \
+    .save()
+
+### Go to Postgre Database
+docker exec \
+    -it postgress_container \
+    psql -U postgres
+
+### Use prescpipeline database for user
+\c prespipeline sparkuser1;
+
+### Check the table that we just created
+\d

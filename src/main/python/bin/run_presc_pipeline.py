@@ -9,7 +9,7 @@ from validation import get_curr_date, df_count, df_top10_rec, df_print_schema
 import logging.config
 import logging
 import presc_run_data_ingest
-from  presc_run_data_transform import city_report
+from  presc_run_data_transform import city_report, presc_report
 
 ###get all variables
 
@@ -94,6 +94,14 @@ def main():
         # validate
         df_top10_rec(final_city_report, 'city_report')
         df_print_schema(final_city_report, 'city_report')
+
+
+         #prescriber final report:
+        final_presc_report = presc_report(df_city_sel, df_fact_sel)
+
+        # validate
+        df_top10_rec(final_presc_report, 'final_presc_report')
+        df_print_schema(final_presc_report, 'final_presc_report')
 
         logging.info("run_presc_pipline is completed")
 

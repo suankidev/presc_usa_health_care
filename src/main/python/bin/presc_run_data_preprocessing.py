@@ -19,7 +19,7 @@ def perform_data_clean(df1: pyspark.sql.DataFrame, df2: pyspark.sql.DataFrame):
         df_city_sel = df1.select(upper(df1.city).alias("city"),
                                  df1.state_id,
                                  upper(df1.state_name).alias("state_name"),
-                                 upper(df1.county_name).alias("countr_name"),
+                                 upper(df1.county_name).alias("country_name"),
                                  df1.population,
                                  df1.zips)
 
